@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  react:
+    build: ./
+    volumes:
+      - ./:/app:cached
+      - /app/node_modules
+      - /app/logs
+    environment:
+      CI: "true"
+      PORT: 80
+
